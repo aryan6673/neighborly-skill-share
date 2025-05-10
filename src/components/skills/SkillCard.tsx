@@ -29,19 +29,20 @@ const SkillCard = ({
   const userInitial = userName.charAt(0).toUpperCase();
   
   return (
-    <Card className="h-full flex flex-col">
+    <Card className="h-full flex flex-col ghibli-card overflow-hidden">
+      <div className={`h-1.5 w-full bg-skill-${category}`} />
       <CardHeader className="pb-2 flex items-center">
         <div className="flex items-center space-x-3 w-full">
-          <Avatar className="h-10 w-10">
+          <Avatar className="h-10 w-10 border-2 border-white shadow-sm">
             <AvatarImage src={userAvatar} alt={userName} />
-            <AvatarFallback>{userInitial}</AvatarFallback>
+            <AvatarFallback className="bg-accent text-accent-foreground">{userInitial}</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">
             <span className="font-medium">{userName}</span>
             <span className="text-sm text-muted-foreground">{neighborhood}</span>
           </div>
         </div>
-        <Badge variant="secondary" className={`skill-tag skill-tag-${category}`}>
+        <Badge variant="outline" className={`skill-tag skill-tag-${category}`}>
           {category}
         </Badge>
       </CardHeader>
@@ -50,8 +51,8 @@ const SkillCard = ({
         <p className="text-muted-foreground line-clamp-3">{description}</p>
       </CardContent>
       <CardFooter>
-        <Button onClick={onConnect} className="w-full">
-          Connect
+        <Button onClick={onConnect} className="w-full group" variant="default">
+          <span className="group-hover:translate-x-1 transition-transform duration-200">Connect</span>
         </Button>
       </CardFooter>
     </Card>
