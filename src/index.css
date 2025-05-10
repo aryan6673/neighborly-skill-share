@@ -7,32 +7,32 @@
 
 @layer base {
   :root {
-    --background: 350 30% 98%;
+    --background: 350 30% 98%; /* Slightly more saturated pink-white */
     --foreground: 220 10% 15%;
 
-    --card: 350 20% 99%;
+    --card: 350 25% 99%; /* More pinkish card background */
     --card-foreground: 220 10% 15%;
 
-    --popover: 350 20% 99%;
+    --popover: 348 25% 99%; /* Slightly pinker popover */
     --popover-foreground: 220 10% 15%;
 
     --primary: 220 10% 15%;
-    --primary-foreground: 350 30% 98%;
+    --primary-foreground: 350 35% 97%; /* Pinker foreground on primary */
 
     --secondary: 220 5% 30%;
-    --secondary-foreground: 350 30% 98%;
+    --secondary-foreground: 350 35% 97%; /* Pinker foreground on secondary */
 
-    --muted: 350 10% 95%;
+    --muted: 348 15% 94%; /* More pink-tinted muted */
     --muted-foreground: 220 5% 40%;
 
-    --accent: 350 30% 95%;
+    --accent: 348 35% 94%; /* Pinker accent */
     --accent-foreground: 220 10% 15%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 350 30% 98%;
+    --destructive-foreground: 350 35% 97%; /* Pinker destructive foreground */
 
-    --border: 220 13% 90%;
-    --input: 220 13% 90%;
+    --border: 348 15% 90%; /* Pink tinted border */
+    --input: 348 15% 90%; /* Pink tinted input */
     --ring: 220 10% 15%;
 
     --radius: 1rem;
