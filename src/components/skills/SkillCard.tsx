@@ -29,7 +29,7 @@ const SkillCard = ({
   const userInitial = userName.charAt(0).toUpperCase();
   
   return (
-    <Card className="h-full flex flex-col ghibli-card overflow-hidden">
+    <Card className="h-full flex flex-col ghibli-card overflow-hidden animate-bounce-in">
       <div className={`h-1.5 w-full bg-skill-${category}`} />
       <CardHeader className="pb-2 flex items-center">
         <div className="flex items-center space-x-3 w-full">
@@ -38,8 +38,8 @@ const SkillCard = ({
             <AvatarFallback className="bg-accent text-accent-foreground">{userInitial}</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">
-            <span className="font-medium">{userName}</span>
-            <span className="text-sm text-muted-foreground">{neighborhood}</span>
+            <span className="font-medium italic">{userName}</span>
+            <span className="text-sm text-muted-foreground italic">{neighborhood}</span>
           </div>
         </div>
         <Badge variant="outline" className={`skill-tag skill-tag-${category}`}>
@@ -47,11 +47,11 @@ const SkillCard = ({
         </Badge>
       </CardHeader>
       <CardContent className="flex-1">
-        <h3 className="font-semibold text-lg mb-1">{title}</h3>
-        <p className="text-muted-foreground line-clamp-3">{description}</p>
+        <h3 className="font-semibold text-lg mb-1 italic">{title}</h3>
+        <p className="text-muted-foreground line-clamp-3 italic">{description}</p>
       </CardContent>
       <CardFooter>
-        <Button onClick={onConnect} className="w-full group" variant="default">
+        <Button onClick={onConnect} className="w-full group italic" variant="default">
           <span className="group-hover:translate-x-1 transition-transform duration-200">Connect</span>
         </Button>
       </CardFooter>

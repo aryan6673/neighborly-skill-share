@@ -74,6 +74,9 @@ export default {
 					other: '#F1F0FB',
 				}
 			},
+			fontFamily: {
+				italic: ['Playfair Display', 'serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -106,6 +109,20 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
+				'bounce-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.8) translateY(20px)'
+					},
+					'70%': {
+						opacity: '0.8',
+						transform: 'scale(1.05) translateY(-5px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1) translateY(0)'
+					}
+				},
 				'float': {
 					'0%, 100%': {
 						transform: 'translateY(0)'
@@ -119,6 +136,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.7s ease-out',
+				'bounce-in': 'bounce-in 0.8s ease-out',
 				'float': 'float 6s ease-in-out infinite'
 			}
 		}

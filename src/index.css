@@ -1,37 +1,39 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 45 30% 98%;
-    --foreground: 220 10% 25%;
+    --background: 350 30% 98%;
+    --foreground: 220 10% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 10% 25%;
+    --card: 350 20% 99%;
+    --card-foreground: 220 10% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 25%;
+    --popover: 350 20% 99%;
+    --popover-foreground: 220 10% 15%;
 
-    --primary: 198 60% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 220 10% 15%;
+    --primary-foreground: 350 30% 98%;
 
-    --secondary: 173 58% 39%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 220 5% 30%;
+    --secondary-foreground: 350 30% 98%;
 
-    --muted: 210 20% 96%;
+    --muted: 350 10% 95%;
     --muted-foreground: 220 5% 40%;
 
-    --accent: 173 58% 95%;
-    --accent-foreground: 173 58% 25%;
+    --accent: 350 30% 95%;
+    --accent-foreground: 220 10% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 350 30% 98%;
 
     --border: 220 13% 90%;
     --input: 220 13% 90%;
-    --ring: 198 60% 50%;
+    --ring: 220 10% 15%;
 
     --radius: 1rem;
   }
@@ -49,7 +51,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-semibold tracking-tight font-italic italic;
   }
 
   h1 {
@@ -64,12 +66,16 @@
     @apply text-xl lg:text-2xl;
   }
 
+  p {
+    @apply font-italic;
+  }
+
   a {
-    @apply transition-colors;
+    @apply transition-colors font-italic;
   }
 
   button, a.btn {
-    @apply rounded-lg transition-all duration-200 transform hover:scale-[1.03];
+    @apply rounded-lg transition-all duration-200 transform hover:scale-[1.03] font-italic;
   }
 }
 
@@ -129,5 +135,9 @@
   .ghibli-section::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-b from-transparent to-background/50 pointer-events-none;
+  }
+
+  .animate-bounce-in {
+    @apply animate-bounce-in;
   }
 }
