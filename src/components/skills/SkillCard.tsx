@@ -1,0 +1,61 @@
+
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+export type SkillCategory = "tech" | "music" | "art" | "fitness" | "cooking" | "language" | "diy" | "other";
+
+export interface SkillCardProps {
+  id: string;
+  title: string;
+  description: string;
+  category: SkillCategory;
+  userName: string;
+  userAvatar?: string;
+  neighborhood: string;
+  onConnect?: () => void;
+}
+
+const SkillCard = ({
+  title,
+  description,
+  category,
+  userName,
+  userAvatar,
+  neighborhood,
+  onConnect,
+}: SkillCardProps) => {
+  const userInitial = userName.charAt(0).toUpperCase();
+  
+  return (
+    <Card className="h-full flex flex-col">
+      <CardHeader className="pb-2 flex items-center">
+        <div className="flex items-center space-x-3 w-full">
+          <Avatar className="h-10 w-10">
+            <AvatarImage src={userAvatar} alt={userName} />
+            <AvatarFallback>{userInitial}</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col">
+            <span className="font-medium">{userName}</span>
+            <span className="text-sm text-muted-foreground">{neighborhood}</span>
+          </div>
+        </div>
+        <Badge variant="secondary" className={`skill-tag skill-tag-${category}`}>
+          {category}
+        </Badge>
+      </CardHeader>
+      <CardContent className="flex-1">
+        <h3 className="font-semibold text-lg mb-1">{title}</h3>
+        <p className="text-muted-foreground line-clamp-3">{description}</p>
+      </CardContent>
+      <CardFooter>
+        <Button onClick={onConnect} className="w-full">
+          Connect
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+};
+
+export default SkillCard;
