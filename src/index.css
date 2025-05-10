@@ -137,7 +137,5 @@
     @apply absolute inset-0 bg-gradient-to-b from-transparent to-background/50 pointer-events-none;
   }
 
-  .animate-bounce-in {
-    @apply animate-bounce-in;
-  }
+  /* Removed the circular dependency here */
 }
