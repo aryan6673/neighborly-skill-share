@@ -67,15 +67,15 @@
   }
 
   p {
-    @apply font-italic;
+    @apply font-normal;
   }
 
   a {
-    @apply transition-colors font-italic;
+    @apply transition-colors;
   }
 
   button, a.btn {
-    @apply rounded-lg transition-all duration-200 transform hover:scale-[1.03] font-italic;
+    @apply rounded-lg transition-all duration-200 transform hover:scale-[1.03];
   }
 }
 
